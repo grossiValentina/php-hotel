@@ -61,8 +61,8 @@ $hotels = [
     <!-- Tabella -->
     <table class="table table-hover table-danger">
         <thead>
-            <!-- ciclo per titoli -->
             <tr>
+            <!-- ciclo per titoli -->
             <?php foreach ($hotels[0] as $key => $hotel_array) { ?>
                 <th class="text-center" scope="col"> <?php echo $key ?> </th>
             <?php } ?>
@@ -75,7 +75,7 @@ $hotels = [
             <tr class="text-center">
                 <td> <?php echo $hotel_array["name"] ?>  </td>
                 <td> <?php echo $hotel_array["description"] ?> </td>
-                <td> <?php echo $hotel_array["parking"] ?> </td>
+                <td> <?php echo $hotel_array["parking"] ? "✓" : "x" ?> </td>
                 <td> <?php echo $hotel_array["vote"] ?> </td>
                 <td> <?php echo $hotel_array["distance_to_center"] ?> km </td>
             </tr>
@@ -85,5 +85,4 @@ $hotels = [
     </table>
 
 </body>
-
 </html>
