@@ -59,59 +59,28 @@ $hotels = [
 <body>
 
     <!-- Tabella -->
-    <table class="table">
+    <table class="table table-hover table-danger">
         <thead>
+            <!-- ciclo per titoli -->
             <tr>
-                <th scope="col"></th>
-                <th scope="col">kay 1</th>
-                <th scope="col">kay 2</th>
-                <th scope="col">kay 3</th>
-                <th scope="col">kay 4</th>
-                <th scope="col">kay 5</th>
+            <?php foreach ($hotels[0] as $key => $hotel_array) { ?>
+                <th class="text-center" scope="col"> <?php echo $key ?> </th>
+            <?php } ?>
             </tr>
+
         </thead>
         <tbody>
-            <tr>
-                <th scope="row"></th>
-                <td>name</td>
-                <td>description</td>
-                <td>parking</td>
-                <td>vote</td>
-                <td>distance_to_center</td>
+            <!-- ciclo per informazioni -->
+        <?php foreach ($hotels as $kay => $hotel_array) { ?>
+            <tr class="text-center">
+                <td> <?php echo $hotel_array["name"] ?>  </td>
+                <td> <?php echo $hotel_array["description"] ?> </td>
+                <td> <?php echo $hotel_array["parking"] ?> </td>
+                <td> <?php echo $hotel_array["vote"] ?> </td>
+                <td> <?php echo $hotel_array["distance_to_center"] ?> km </td>
             </tr>
-            <tr>
-                <th scope="row"></th>
-                <td>name</td>
-                <td>description</td>
-                <td>parking</td>
-                <td>vote</td>
-                <td>distance_to_center</td>
-            </tr>
-            <tr>
-                <th scope="row"></th>
-                <td>name</td>
-                <td>description</td>
-                <td>parking</td>
-                <td>vote</td>
-                <td>distance_to_center</td>
-            </tr>
-            <tr>
-                <th scope="row"></th>
-                <td>name</td>
-                <td>description</td>
-                <td>parking</td>
-                <td>vote</td>
-                <td>distance_to_center</td>
-            </tr>
-            <tr>
-                <th scope="row"></th>
-                <td>name</td>
-                <td>description</td>
-                <td>parking</td>
-                <td>vote</td>
-                <td>distance_to_center</td>
-            </tr>
-            
+            <?php } ?>
+
         </tbody>
     </table>
 
